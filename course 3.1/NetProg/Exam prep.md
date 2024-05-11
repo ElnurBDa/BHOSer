@@ -1,0 +1,34 @@
+- [x] `ssh-add` and `ssh-keygen` SSH key
+- [x] Sockets:
+	- Stream Sockets. Socket types. Why it is best for MySQL?
+	- timeout to None
+- [x] ICMP
+- [x] SNMP
+- [x] HTTP
+	- [ ] HTTPS
+	- [ ] Headers
+	- [ ] requests
+	- [ ] methods
+- [x] GIT
+	- [x] network automation
+	- [x] CI/CD
+	- [x] `commit`
+- [x]  Ansible
+	- YAML
+	- difference from other automation tools
+	- roles
+- [x] Mininet
+- [x] LDAP
+- [x] IPv6 and its prefix
+- [x] Pexpect vs Paramiko
+- [x] oAuth
+- [x] AWS 
+	- [ ] AWS Shield against DDOS
+	- [ ] AWS NAT Gateway
+- [x] CGI (Common Gateway Interface) in web programming
+- [x] SMTP, POP, IMAP
+- [x] BGP (Border Gateway Protocol) 
+- [x] TCP echo server
+- [x] TLS
+
+

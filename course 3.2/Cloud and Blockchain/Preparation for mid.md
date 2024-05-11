@@ -1,0 +1,388 @@
+Teacher's presentations(week 1-6), Student Presentations(quantum, providers,cloud+blockchain,block storage,deployment models) and internet.
+# Week 1
+- History
+	- Arpanet
+	- WWW
+- VM
+	- allowed cloud services to be
+- Cloud Computing
+	- it is better because it allows installing, running and maintaining software without having own physical hardware
+	- AWA was first with **simple storage service**(S3) and **elastic cloud service**(EC2)
+		- EC2 allows renting virtual machines, where user can run their own applications. 
+		- S3 is a scalable storage
+- Containers are **packages of software that contain all of the necessary elements to run in any environment**. In this way, containers virtualize the operating system and run anywhere, from a private data center to the public cloud or even on a developer's personal laptop.
+	- Containerization makes your applications portable so that the same code can run on any device. A virtual machine is a digital copy of a physical machine.
+	- Docker makes containers as it provides good API and and automation
+# Week 2
+- Cloud Computing is a model of accessing configurable services such as networks, storages, servers, applications and services with minimal management effort
+- Five essential characteristics:
+	- on-demand self-service. It means that user can control and monitor all the assets he has there
+	- broad network access. It means accessing through the internet and the fact that the access can be administered: bandwidth, access time, latency can be changed.
+	- resource pooling. servers, storages, applications most time are hosted are hosted in shared hardware. Multiple clients are provided service from a same physical resource. It means more than one client can use it. 
+	- rapid elasticity. Storages, servers, applications can be scaled very quickly. cloud services are elastic, scalable and automated which is advantage for growing infrastructure of some business. 
+	- measured services. Resource usage is monitored and measured: used RAM, Storage, CPU, Network Bandwidth. It is done for billing and effective use of resources. 
+	- https://www.upgrad.com/blog/features-characteristics-cloud-computing/
+	- https://www.geeksforgeeks.org/characteristics-of-cloud-computing/
+	- easy maintenance 
+	- economical, sometimes even free
+	- reporting. if there any error, it is reported. 
+	- automation. services can be automatically configured, installed, built, and run. 
+	- security. hardly getting any threat of piracy or data breach
+	- resilience. even if some catastrophe, cloud provider will recover quickly.
+	- virtualization technologies.
+- Three service models
+	- on premise - your own hardware with its resources. 
+	- IaaS - Infrastucture as a service
+		- virtuzalised computing resources over the internet
+		- hardware components belongs to cloud
+		- Examples
+			- AWS EC2
+			- Microsoft Azure Virtual Machines
+			- Google Compute Engine
+	- PaaS - Platform as a service
+		- building testing deploying managing updating running application. 
+		- Examples
+			- Heroku
+			- Microsoft Azure App services
+			- Google App engine
+		- For example, you developed an app, it is uploaded to Github repository, then you use PaaS, by giving it link to github, and it wiil build application itself, and will run it. Also, it maybe a docker. 
+	- SaaS - Software as a service
+		- Some already built software application is provided
+		- Examples:
+			- Google Workspace
+			- Salesforce
+			- Microsoft Office 365
+			- Gmail
+	- https://cloud.google.com/discover/types-of-cloud-computing
+![[Pasted image 20240224190807.png]]
+- Four deployment models  
+	- Public - owned by Cloud providers and provide cloud computing services to anyone through the internet
+		- AWS, Microsoft Azure, GCP are examples 
+		- less secure as it is open to anyone
+		- the infrastructure is owned by cloud provider, it just allows using their resources.
+		- cheaper
+	- Private - it is dedicated for use of one organization, can be hosted internally or by a third party service that provides service only to one organization. More secure, better control and customization. It is when organization do not want a third party to have their infrastructure. (Mainly used by critical infrastructure services such as banks and telecom providers)
+		- infrastructure is owned by a user 
+		- secure as it is under control of IT supervision of org
+		- costly and less scalable
+		- VMWare (ESXI), IBM Cloud Private
+	- Hybrid - Public+Private. 
+		- harder to manage
+		- slower data transmission
+		- but cheaper than public
+	- Community - it is shared among organizations with specific concern - sercurity, jurisdiction, complaince. 
+		- few organizations for shared cloud
+	- https://www.geeksforgeeks.org/cloud-deployment-models/
+- https://www.youtube.com/watch?v=_a6us8kaq0g
+# Week 3
+- AWS - Amazon Web services
+	- it provides cloud computing platforms and APIs to everyone with pay-as-you-go business model, you only pay for what you use
+	- It offers these products:
+		- API Services
+		- S3
+		- EC2
+		- Amazon SimpleDB
+		- Amazon CloudFront
+		- AWSGovCloud
+	- The first in market and the most mature
+	- A lot of datacenters in the world
+	- Supports open source technologies
+	- Hybrid cloud infrastructure
+	- leader in IaaS, but also very good at PaaS
+	- https://www.youtube.com/watch?v=a9__D53WsUs
+		- It can be used for anything including ML, AI, IoT
+		- AWS Lambda - serverless computing, allows developers run their code without managing a server. 
+		- Amazon SageMaker - ML service
+		- Amazon servers are everywhere, they have availibility zones where they are connected with low latency high redundant networking.
+			- scalable 
+			- fault tolerant
+			- highly available
+	- https://www.youtube.com/watch?v=mxT233EdY5c
+		- application running on cloud can be copied to another regions in order to reduce latency 
+	- https://www.youtube.com/watch?v=r4YIdn2eTm4
+		- services
+			- EC2 - Elastic Compute Cloud
+				- gives a virtual machine to run
+			- VPC - Virtual Private Cloud
+				- allows creating networks and having multiple machines that can be networked
+			- S3 - simple storage service
+				- upload and share files
+			- RDS - Relational database service
+				- run and manage databases on cloud
+			- Route 53 - DNS service
+			- ELB - Elastic Load Balancer
+				- load balance incoming traffic
+			- Autoscaling
+				- if usage grows, allocated resources are also automatically growing 
+		- billing is per hour, it is region specific, it can be term specific. Biliing for a period(term) is cheaper
+	- more than 200 services
+	- https://en.wikipedia.org/wiki/Amazon_Web_Services
+- Microsoft Azure
+	- cloud services: computing, analytics, storage and networking
+	- supports open source (https://azure.microsoft.com/en-us/solutions/open-source/), redhat, elastic, suse, confluent, docker, canonical
+	- in market it is used because of already estalished relationships with organizations
+	- allows intergration of all microsoft products in cloud, 
+	- provides hybrid cloud infrastructure: Azure Stack and Azure Arc 
+	- it is slightly behind aws
+	- PaaS are very good, IaaS is improving. SaaS is the best: Office 365, and Dynamics 365
+	- https://en.wikipedia.org/wiki/Microsoft_Azure
+		- It allows using both microsoft and third party tools in cloud
+		- Azure even has its own Linux distro for it - Azure Sphere OS
+		- PaaS allows deploying ready code using git, ftp and other things developed in various programming languages
+		- Azure Kubernetes Service (AKS) that facilates working with dockers
+		- Azure Blockchain Workbench - allows setting up blockchains
+	- https://www.youtube.com/watch?v=3Arj5zlUPG4
+	- Azure services are in 18 categories with more than 200 services
+		- Compute
+			- VM in Linux or Windows
+			- Cloud Service, application is deployed, managed
+			- Service Fabric - microservice development. Microservice - is smaller application that will be combined with other microservices to be full application
+			- Functions - serverless functions in any language. No need to worry about used resources, just provide code, and it will be executed
+		- Networking
+			- Azure CDN - high bandwidth for web application content delivery. CDNs are placed across the world so users can access the web site very fast
+			- Express Route - allows connecting your on-premise network into Microsoft Cloud
+			- Virtual Network - allows Azure resources to comminicate in secure and private manner
+			- Azure DNS - hosts domain names
+		- Storage
+			- Disk Storage - cost effective HDD or SSD options that can be used by Azure Virtual Machines
+			- Blob storage - storing massive amount of unstructured data as text or binary, storing images videos log files and many other things. 
+			- File Storage - file storage that can be accessed via SMB
+			- Queue Storage - it stores large messages that can be accessible using authenticated HTTP(S)  
+	- uses more green energy
+- GCP - Google Service Provider
+	- a lot of services that run on google hardware
+	- products
+		- google AppEngine
+		- Google Cloud Storage
+		- Google Compute Engine
+		- Google Container Engine
+	- strong in data analytics, ML and AI technologies, (for example, Google's Collaboratory allows doing data analysis. Others: Big query and Tensorflow)
+	- support open source technologies (https://cloud.google.com/blog/products/open-source/bringing-the-best-of-open-source-to-google-cloud-customers), Elastick, Kubernetes, Confluent
+	- has fewer regions comaped to other 2 
+	- very strong in PaaS - Google App Engine
+	- and SaaS (Gmail for example)
+- https://www.youtube.com/watch?v=4AVQchL9tTo
+	- Pricing
+		- aws is not that clear
+		- Azure offers good pricing and discounts for long term commitments
+		- GCP most cost effective
+	- Services
+		- aws offers a lot
+		- Azure also a lot but a little less than aws (it is better for enterprise)
+		- gcp smaller ranage of services ( better for developers and startups)
+	- Web Console (UI access to services)
+		- aws offers comprehensive but overhelming for beginners. 
+		- azure is more intuitive
+		- gcp is most user friendly
+	- IoT
+		- aws offers a lot of services but again a little overwhelming for beginners
+		- azure iot central - is better, allows managing and controlling IoT devices
+		- gcp too, but not better, but more focused for data analytics.
+	- generally
+		- aws very overwhelming with a lot of services, more complete. additionally most reliable and robust
+			- for big organizations
+		- azure very beginner friendly. strong in areas of AI and ML
+			- for smth between big enterprise and small startup
+		- gcp is easy to start and use and mostly focused on data analytics
+			- for developer and startups
+	- SDKs - Sotware development Kits
+		- all are the same and good, with various programming languages
+	- Databases
+		- AWS - all kind of databases (relational, document, graph, etc)
+		- Azure - Azure SQL, Azure NoSQL and others but not as much as aws
+		- GCP - Cloud Spannet (SQL), Cloud Bigtable (NoSQL), Cloud Datastore (documents database)
+	- No code / low code
+		- aws - AWS app runner(develop and deploy code), AWS HoneyCode (almost no code and deploy) 
+		- Azure - Azure Logic Apps (workflows that allow automating some business processes), Power Automate (also automates), 
+		- GCP - Cloud Dataflow
+- Data storage services
+	- File Storage
+		- hierachical file and directory structure
+		- effective for applications that use traditional way of storing data
+		- Azure files, AWS Elastic File System (EFS)
+		- NFS, SMB/CIFS
+	- Object Storage
+		- data as object
+		- each object has data metadata and id
+		- objects are stored in buckets
+		- accessed via RESTful APIs over HTTP(S)
+		- ideal for web app
+		- better in scaling, with high durability
+		- best for storing data that is not changing often: images videos backups
+		- AWS S3, Azure Blob storage, Google Cloud Storage
+	- Block Storage
+		- data is splitted into blocks with no metadate but addresses to blocks
+		- can scale but limited by environment (server)
+		- better performance, for fast operations like deleting and editing data
+		- aws elastic block store (EBS), Azure disk storage, google persistent disk
+- Cloud Responsibilities
+	- infrastructure security
+	- phisical security
+	- network security
+	- availibilty
+	- storage security
+	- data security
+	- IAM
+		- a framework of policies and technologies to ensure that the right users have the appropriate access to technology resources
+	- OS and Network configuration
+	- Application Security
+	- Endpoint Security
+- Cloud Compliance 
+	- to prove that they are compliant to international standard and local regulations they Cloud Providers should have certifications
+	- ISO 27001
+	- HIPPA
+	- GDPR
+	- PCI DSS
+	- FedRAMP
+- Cloud Availibility 
+	- cloud service providers have a lot of regions and availibility zones to ensure availibility 
+		- each of them has redundant power networking connectivity and they are located in separated facilities. 
+	- geographically distributed, so if one id damaged, other facilities will work and will provide services.
+	- reduncany 
+	- scalability and load balancing
+	- failover mechanisms   
+# Week 4 
+- serverless computing
+	- write and deploy code without managing OS, installing tools for managing app, etc
+	- you will have a code (in github repo for example), you will specify how to run/build the application(for example build with `npm` command), and serverless provider will deploy it.
+	- customer will not pay for fixed amount of bandwidth or number of deployed servers, the serverless service is auto scaling
+	- you will pay as you use. 
+		- For example, in ordinary way, you pay 10 dollars for 1 unit, and till amount of resources on this unit reaches maximum you pay 10 dolllars, then you will increase to 2 units with 20 dollars. But, in serverless, you will pay as you use, for example you using 0.7 resources then you pay 7 dollars. 
+	- lower costs
+	- simplified scalability
+	- simplified backend
+	- quicker turnaround, you will make profit faster.  
+	- Problem - Cold start.
+		- application needs time to start
+		- if application is not used in a while (for example in night hours), it will sleep
+		- and it will take time until it will start, as runtime maybe very high (as in java applications)
+		- Cloudflare solves it by starting application in advance before it is used, in as early stage as possible - in TLS handshake
+	- Serverless database - autoscaling database that increases as application's demand increases 
+	- Serverless Computing/Database Providers
+		- AWS Lambda/ Amazon Aurora Serverless
+		- Azure Functions/ Azure Cosmo DB
+		- Google Cloud Functions/ Google Cloud Firestore
+		- Cloudflare Workers/ Cloudflare D1
+		- Heroku
+		- Digital Ocean
+	- Additionally, the providers can be configured to use domain names, WAFs, Monitoring
+	- deployed code will continuosly check whether there are some changes in github? maybe developer pushed new changes. Then it will deploy application again. 
+	- Quantum Computing - more discussed in our presentation.
+	- Edge Computing
+		- making computation and storage happen closer to customer than in very remote place
+		- reducing latency
+		- save bandwidth
+		- improve responsivness ( processing data in edge and then sending to central place rather than sending to central place and computing there)
+		- https://en.wikipedia.org/wiki/Edge_computing
+			- bringing computation closer to user, or in simple client-side computing. 
+			- CDN
+	- AI in the cloud
+		- cloud provide AI capabilities, ML, computer vision, automated reasoning
+		- AWS ML services: Amazon SageMaker, Recognition
+		- Google Gloud AI: AutoML, Dialogflow
+		- Azure AI services: Azure ML, Cognitive services
+	- Cloud Networking
+		- it is about network connectivity of cloud resources, VMs, servers, data storages. 
+		- network management
+		- service deployment in the cloud
+		- scalability, flexibility, cost efficiency
+		- virtual networks
+		- load balancing
+		- VPN and Direct Connect
+		- Firewalls, security groups and security technologies (WAF) 
+	-   CDN - Contenet Delivery Networks
+		- CDNs are placed around the world, and tries deliviring content more rapidly
+		- improved load time
+		- reduced bandwidth cost
+		- increased availibility and realibility 
+# Week 5
+- Blockchain
+	- it is a decentrialised distributed ledger that has records that cannot be tempered and can be seen by anyone. 
+	- it uses cryptography and consensus mechanisms
+	- timestamps and securely records transactions
+	- https://en.wikipedia.org/wiki/Blockchain
+		- records are cryptographically linked.
+			- each block contains hash of previous block. So they are linked. And if you alter one data that sits in one block (block X) in blockchain then  its hash in block after (block X+1) also changes, then its hash changes and etc
+			- then chain like in liked list is formed
+			- So, after putting a record into blockchain it cannot be altered, and if altered then all subsequent blocks also change
+		- blockchain is secure by design
+		- but sometimes a block inside blockchain is tampered, then new fork (new version) of blockchain is formed. 
+		- blockchain's database is places on all nodes simultaneously.
+		- blockchain has several layers
+			- infrastructure (hardware)
+			- networking (node discovery, information propagation and verification)
+			- consensus (proof of work, proof of stake)
+			- data (blocks, transactions)
+			- application (smart contracts/decentralized applications, if applicable)
+		- first block that has no previos block is considered genesis block (block 0)
+		- sometimes blocks are created simultaneously, and they form forks, then it is decided which has better score (it is calclulated based on several factors regarding the block and its history), and the block is selected over other blocks.
+			- not selected blocks are orphans
+		- peers/nodes/PCs that support the blockchain can have different versions of history sometimes, and after receiving another version of history but with higher scores, that accept that version. 
+			- In PoW, the chain that had more work is selected over others.
+		- Block time - it is time that takes a blockchain to generate a new block, for ethereum it can be 15 seconds while for Bitcoin 10 minutes in average.
+		- Hard fork - is a change to the blockchain protocol that is not backward compatible and requires all users to upgrade their software in order to continue participating in the network. In a hard fork, the network splits into two separate versions: one that follows the new rules and one that follows the old rules. 
+		- Decentralization
+			- by holding blocks distributed on all nodes, no one has central power
+			- but if someone has more than half of blockchain then he can make a `51% attack` which allows double spending
+				- Double spending occurs when the same digital token(money) can be spend again after being spent initially
+		- Permissionless (public) and Permissioned (private) blockchain. One where anyone is allowed to use it, another is where all nodes should agree that new user can use it. 
+		- Sidechain - is a blockchain that runs parallel to the main blockchain. For example, Avalanche is sidechain of Ethereum.
+- Consensus Mechanisms
+	- PoW - Proof of Work
+		- it is used by most popular blockchains like BitCoin and LiteCoin
+		- It requires a node to prove that work done and submitted by them has right to add a new transaction to the blockchain
+		- Miner solves some cryptographic puzzle and by that he does some work
+		- in order to submit malicious block, PC (miner) that does a job should be more powerful than 51% of other PCs in network
+		- for solving a puzzle miner receives a reward
+		- https://en.wikipedia.org/wiki/Proof_of_work
+			- with PoW, it will not be that easy to create blocks, which prevents DOSing blockchain. It will require some effort to append a block to blockchain.https://en.wikipedia.org/wiki/Proof_of_work
+			- the computation is relatively hard but feaseable
+			- after making a work, user is rewarded.
+			- it is criticised because it consumes a lot of energy
+			- There are two classes of proof-of-work protocols. (read in wiki)
+				- Challenge–response
+				- Solution–verification
+			- https://www.geeksforgeeks.org/implementing-the-proof-of-work-algorithm-in-python-for-blockchain-mining/ to understand PoW better
+	- PoS - Proof of Stake
+		- low computation cost
+		- low energy consuming
+		- the process is making a node maintain blockchain propotionally to the assets he has
+		- it makes collecting and keeping assets more advantageous than spending it
+		- block creator is chosen on algorithm on stake
+		- in order to add a false block user should have more than half of all virtual assets
+		-  no reward in creating a block, a creator just takes a transaction fee
+		- https://en.wikipedia.org/wiki/Proof_of_stake
+	- Public blockchain
+		- no central authority controls blockchain
+		- blockchain is transparent, all transcations are visible to everyone
+		- anyone can partipate
+	- Private blockchain
+		- Controlled and managed by single org
+		- transcations can be private, so only participants can understand 
+		- faster and more scalable, because number of node are less
+	- blockchain is unalterable, decentralized, distributed
+	- blockchain is secure, as blocks are/can be encrpyted
+	- Consensus - every blockchain has it, and it helps making decisions quick and unbiased
+	- Unanimous - all nodes agree on validity of block before it can be added
+# Week 6
+- cryptocurrency
+	- money transfer
+	- digital wallet
+	- PoW: mining -> money
+	- PoS: verifieng -> money
+	- transactions are verfied by network
+- Smart contracts 
+	- programs that are deployed onto blockchain and under some conditions getting executed
+	- automates most parts of processes on blockchain
+	- transaprent and open source
+	- less cost in execution and less time as most optimisied
+	- in Ethereum it is solidity
+- DApps
+	- apps that run on blockchain
+	- accesisble through web or mobile interfaces and APIs
+	- open source
+	- Application of Decentrilised Applications
+		- Soc Media
+		- DeFi
+		- Gaming
+		- Decentrilised Marketplace

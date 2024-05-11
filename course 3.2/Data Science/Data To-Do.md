@@ -1,0 +1,7 @@
+- Python
+	- Pandas
+	- Matplotlib
+- SQL
+	- Windows Function
+	- Temprorary Table and CTE
+	- Export and Import csv to SQL
