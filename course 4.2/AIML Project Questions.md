@@ -1,0 +1,37 @@
+- macro f1 score
+	- Macro F1 is the average of F1 scores calculated independently for each class, treating all classes equally regardless of their support (number of samples).
+- Training Loss vs Validation Loss
+	- overfitting/underfitting
+- Augmentation
+- ResNet - skip connections 
+	- features are better passed
+	- it learns difference between input and output layers
+	- to solve gradient vanishing
+- Convolution - Padding -> give 10x10 image and wanted some image
+- Softmax is an activation function used in the last layer of neural networks for multi-class classification tasks.
+- Cross-Entropy is a loss function used to measure how well the model’s predicted probabilities match the actual labels.
+- how Feature Classifier (FC) layer is changed?
+- why image size?
+	- because ImageNet specification
+	- should be 224x224
+- learning rate - why we used so
+- sgd and adam learning rate?
+	- adam is adaptive and can change learning rate
+- why VGG has different number of layers
+- learning rate better if loss decreases 
+- back propogation
+	- updating the weights to minimize the loss.
+	- sgd depends on learning rate
+- why last layer is changed
+- class imbalance
+	- classwise f1 score is best
+		- Doesn’t care about how many examples are in each class.
+- pretraing vs finetuning
+	- Pretraining - You train a model on a big, general dataset (like ImageNet or Wikipedia). It's not specific to your task — it just builds a "smart" starting point.
+	- Fine-tuning - You take that pretrained model and train it a bit more on your specific dataset.
+- transformations normalization 
+	- It’s about scaling data so it’s easier for the model to learn.
+- the last layer - fully connected layer 
+	- The last fully connected layer is the "decision-maker" of your neural net. It combines all the features and outputs the final result.
+- A fully connected (FC) layer is a layer where every neuron is connected to every neuron in the previous layer.
+- 

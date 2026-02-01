@@ -1,0 +1,3 @@
+- 30 mid 30 pres 40 final
+- Week 3 presentation is ours
+- Mid - 3 march
